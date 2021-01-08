@@ -3,10 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" >
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <main>
+            {{ include('app/_header.html.twig') }}
+            {% block body %}{% endblock %}
+            {{ include('app/_footer.html.twig') }}
+        </main>
     </body>
 </html>

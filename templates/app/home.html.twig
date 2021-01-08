@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+     
+{% block body %}
+     <div>
+        <h1>numerosuspect.com, c'est quoi ?</h1>
+        <p><b>numerosuspect.com</b> liste les numeros qui tentent des arnaques telephoniques</p>
+        <p>Participez vous aussi à la communauté d'utilisateur qui denoncent chaque jour les numeros suspectés d'arnaque ou d'escroqueries potentielles.
+        <a href="{{ path('add_phone') }}">Ajouter les numeros</a> qui vous harcèlent ou qui tentent des arnaques telephoniques</p>
+    </div>
+    <div>
+        <h2>Listes des numéros suspects</h2>
+        <div>
+            {% for alert in alerts %}
+                <p><b>{{ alert.number }}</b> publié le : {{ alert.date|date("d/m/Y") }} :</p>
+                <p>{{ alert.content }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

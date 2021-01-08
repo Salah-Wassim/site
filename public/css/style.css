@@ -1,0 +1,42 @@
+/*RESET CSS*/
+body{
+    margin:0;
+}
+p,h1,h2,h3,h4,h5,h6{
+    padding:8px;
+}
+a{
+    list-style:none;
+}
+/*HEADER*/
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#000;
+    height:60px;
+}
+header > a {
+    color:#FFF;
+    margin:0 3px;
+    padding:5px;
+} 
+/*AJOUTER NUMERO*/
+/*CGU*/
+.contain-cgu{
+    width:50%;
+}
+.contain-cgu > p{
+    display:inline-block;
+}
+/*FOOTER*/
+footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#000;
+    height:60px;
+}
+footer > p{
+    color:#FFF;
+}
